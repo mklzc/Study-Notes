@@ -5,7 +5,9 @@ $ sudo apt install wine64 (sudo apt install wine32)
 $ wine --version
 ```
 
+Run
 ```console
+$ winecfg
 $ wine program.exe
 ```
 

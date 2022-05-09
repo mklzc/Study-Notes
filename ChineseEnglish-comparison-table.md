@@ -8,4 +8,6 @@
 | indentation        | 缩进         |
 | recursive call     | 递归调用     |
 | alpha              | 透明度       |
-| load banlance      | 负载均衡     | 
+| load banlance      | 负载均衡     |
+| deprecation        |              |
+|                    |              |

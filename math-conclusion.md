@@ -164,6 +164,15 @@ int CRT()
 
 #### 可重集排列和可重集组合
 ![](https://cdn.luogu.com.cn/upload/image_hosting/w9gkg3ok.png)
+##### 多重集的组合数
+从 $n$ 个元素中选取 $m$ 个元素，同一元素允许重复选取，产生的组合数量为 $C_{n + m - 1}^{m - 1}$。
+
+可重集排列：（多组组合）
+将 $n$ 个元素分成 $k$ 组，产生的组合个数为
+
+可重集组合： (不定方程的非负整数解)
+$x_1 + x_2 + x_3 + \dots + x_n = m$
+非负整数解的个数为：$C_{n + m - 1}^{m - 1}$
 
 - **证明**
 
@@ -172,7 +181,7 @@ int CRT()
 **证明**
 
 #### 二项式定理
-- **证明**
+- **证明（分析法）**
 
 #### 容斥原理
 - **理解**
@@ -181,42 +190,63 @@ int CRT()
 - **定义**
 
 - **例子**
+	- 欧拉剖分
+
+#### 组合杂项
+
+- 组合数的线性预处理
+- 杨辉三角与组合数
+- 组合数的性质
 
 ## 线性代数
 
 #### 矩阵概念
+![](https://cdn.luogu.com.cn/upload/image_hosting/6aq90t58.png)
+$X$ 阶矩阵： 行数与列数都等于 $n$ 的矩阵称为 $n$ 阶矩阵或 $n$ 阶方阵。
+单位矩阵：主对角线上的元素都为 $1$ ，其余元素均为 $0$ 的 $n$ 阶方阵称为 $n$ 阶单位矩阵，记为 $E$。
+逆矩阵：设 $A$ 是一个 $n$ 阶矩阵，若存在另一个 $n$ 阶矩阵 $B$ ，使得： $A \times B = E$
+
+矩阵的迹：
+$n \times n$ 矩阵 $A$ 的对角元素之和称为矩阵A的迹( $trace$ ),记作 $tr(A)$:
+![](https://bkimg.cdn.bcebos.com/formula/6f97cd92926c3bd38460d597dca38f83.svg)
 
 #### 特殊矩阵
 
 - **稀疏矩阵**
+我们知道矩阵是一个由 $m$ 行和 $n$ 列组成的二维数据对象，因此一共有 $m \times n$ 个数值。当这个矩阵的绝大部分数值为零，且非零元素呈不规律分布时，则称该矩阵为稀疏矩阵（ $Sparse\ Matrix$ ）
+与它相对的一个概念叫稠密矩阵，，那些非零数值占大多数元素的矩阵即是稠密矩阵（ $Dense\ Matrix$ ），
 
 - **三角矩阵**
+三角矩阵（ $Triangular\ Matrix$ ）分为上三角矩阵和下三角矩阵。
+上三角矩阵（ $Upper\ Triangular\ Matrix$ ）是指主对角线以下元素全为0的矩阵，如：
+![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+0+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+4+%26+5+%5C%5C+0+%26+6+%26+0+%5C%5C+0+%26+0+%263+%5Cend%7Bpmatrix%7D)
+下三角矩阵（Lower Triangular Matrix）是指主对角线以上元素全为0的矩阵，如：
+![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+0+%5C%5C+4+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+0+%26+0+%5C%5C+0+%26+0+%26+0+%5C%5C+4+%26+6+%263+%5Cend%7Bpmatrix%7D)
+
 
 - **对称矩阵**
+对称矩阵（Symmetric Matrix）是指元素以主对角线为对称轴对应相等的矩阵，例如：
+![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+3+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+5+%26+6+%5C%5C+5+%26+0+%26+7+%5C%5C+6+%26+7+%263+%5Cend%7Bpmatrix%7D)
 
 #### 矩阵的初等变换
+- 交换两行或两列
+![](https://pic4.zhimg.com/v2-e9426c8380df62896a3cd6c9ce927883_b.webp)
+- 用一个数 $K$ 乘以某一行
+![](https://pic3.zhimg.com/v2-c0caf102be74316b9df45a89fbe918fa_b.webp)
+- 用某个数乘以某一行加到另一行中去
+![]
 
 #### 矩阵的加减乘和转置运算
+矩阵的加减乘
+![](https://cdn.luogu.com.cn/upload/image_hosting/5svg43de.png)
+
+矩阵的转置运算
+![](https://pic2.zhimg.com/v2-486fa661982257c614058c13a706bb05_r.jpg)
+
+
 
 #### 线性方程组的高斯消元法
 
 历年NOIP的数学题
-- [P7962 [NOIP2021] 方差 紫](https://www.luogu.com.cn/problem/P7962)
-- [P7960 [NOIP2021] 报数 黄](https://www.luogu.com.cn/problem/P7960)
-- [P7116 [NOIP2020] 微信步数 紫](https://www.luogu.com.cn/problem/P7116)
-- [P5023 [NOIP2018 提高组] 填数游戏 紫](https://www.luogu.com.cn/problem/P5023)
-- [P5020 [NOIP2018 提高组] 货币系统 绿](https://www.luogu.com.cn/problem/P5020)
-- [P3951 [NOIP2017 提高组] 小凯的疑惑 黄](https://www.luogu.com.cn/problem/P3951)
-- [P2822 [NOIP2016 提高组] 组合数问题 绿](https://www.luogu.com.cn/problem/P2822)
-- [P2312 [NOIP2014 提高组] 解方程 蓝](https://www.luogu.com.cn/problem/P2312)
-- [P1965 [NOIP2013 提高组] 转圈游戏 黄](https://www.luogu.com.cn/problem/P1965)
-- [P1082 [NOIP2012 提高组] 同余方程 绿](https://www.luogu.com.cn/problem/P1082)
-- [P1314 [NOIP2011 提高组] 聪明的质监员 绿](https://www.luogu.com.cn/problem/P1314)
-- [P1313 [NOIP2011 提高组] 计算系数 黄](https://www.luogu.com.cn/problem/P1313)
-- [P1072 [NOIP2009 提高组] Hankson 的趣味题 绿](https://www.luogu.com.cn/problem/P1072)
-- [P1066 [NOIP2006 提高组] 2^k进制数 蓝](https://www.luogu.com.cn/problem/P1066)
-- [P1092 [NOIP2004 提高组] 虫食算 蓝](https://www.luogu.com.cn/problem/P1092)
-- [P1033 [NOIP2002 提高组] 自由落体 黄](https://www.luogu.com.cn/problem/P1033)
-- [P1024 [NOIP2001 提高组] 一元三次方程求解 橙](https://www.luogu.com.cn/problem/P1024)
-- [P1017 [NOIP2000 提高组] 进制转换 黄](https://www.luogu.com.cn/problem/P1017)
-- [P1011 [NOIP1998 提高组] 车站 橙](https://www.luogu.com.cn/problem/P1011)
+考点：
+式子简化

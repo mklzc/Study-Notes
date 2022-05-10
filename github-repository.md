@@ -5,3 +5,8 @@ $ git remote add origin git@github.com:mklzc/mklzc.git
 $ git push -u origin master
 $ git clone github.com/mklzc/Computer-note
 ```
+```console
+$ git add .
+$ git commit -m 'message'
+$ git checkout .
+```

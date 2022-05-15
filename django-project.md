@@ -1,3 +1,4 @@
+## My django project Learning-Log
 **set up django(build a virtual environment)**
 ```console
 $ pip install --user virtualenv
@@ -37,4 +38,15 @@ Then you can login in "127.0.0.1:8000/admin"
 **Access to interactive terminals**
 ```console
 (ll-env)learning-log$ python3 manage.py shell
+```
+
+**Deploy by docker**
+```console
+$ sudo docker run -it -d --name learninglog -p 80:8000 django_docker_img:v1
+$ sudo docker ps
+```
+Type in to start the container and the project. 
+```
+$ sudo docker exec -it learninglog /bin/bash 
+$ python3 manage.py runserver
 ```

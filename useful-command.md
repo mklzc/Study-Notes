@@ -4,3 +4,8 @@ echo $PS1
 export PS1="\u > "
 export PS1="\u@\h$ "
 ```
+
+**Open a software (like .pdf or .png etc) with the command line**
+```console
+xdg-open SoftwareName
+```

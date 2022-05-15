@@ -1,4 +1,4 @@
-**set up python2-pip**
+**set up python3-pip**
 ```console
 $ sudo apt update
 $ sudo apt install python3-pip

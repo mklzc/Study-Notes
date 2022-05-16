@@ -9,3 +9,7 @@ export PS1="\u@\h$ "
 ```console
 xdg-open SoftwareName
 ```
+**clean the powershell history**
+```console
+Remove-Item (Get-PSReadlineOption).HistorySavePath
+```

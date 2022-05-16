@@ -195,7 +195,25 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
 #### 组合杂项
 
 - 组合数的线性预处理
+```cpp
+int C(int x, int y)
+{
+	return fac[x] * inv[x - y] % mod * inv[y] % mod;
+}
+void init()
+{
+	for (int i = 2; i < N; i++)
+	{
+		inv[i] = (mod - mod / i) * inv[i] * inv[mod % i] % mod;
+		fac[i] = fac[i - 1] * fac[i] % mod;
+	}
+	for (int i = 2; i < N; i++)
+		inv[i] = inv[i] * inv[i - 1] % mod;
+}
+
+```
 - 杨辉三角与组合数
+![](https://tse1-mm.cn.bing.net/th/id/R-C.5fcbc7793b20a34c4f5e67f2a156e94f?rik=Q9RaZG75okd2Gg&riu=http%3a%2f%2fwww.rcydt.cn%2fuploadfile%2f2019%2f0430%2f20190430040517860.jpg&ehk=b7E7L1oc9Yz7rP4cbDrDnOawD%2bnRXqSPYETVZ6GV0dA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1)
 - 组合数的性质
 
 ## 线性代数

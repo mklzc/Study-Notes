@@ -1,29 +1,32 @@
+# 数学知识总结
+
 ## 初等数论
-#### 同余式
+
+### 同余式
+
 - **基本概念**
-
 - **一些性质**
-
 - **同余类、剩余系**
 
-#### 欧拉定理和欧拉函数
+### 欧拉定理和欧拉函数
+
 欧拉函数：
 
 - **概念**
-
 - **求法**：线性筛
+
 ```cpp
 int phi[N], primes[N], v[N];
 phi[1] = 1;
 for (int i = 2; i <= n; i++)
 {
-	if (!v[i]) v[i] = i, primes[++cnt] = i, phi[i] = i - 1;
-	for (int j = 1; j <= cnt; j++)
-	{
-		if (v[i] > primes[j]) break;
-		v[primes[j] * i] = primes[j];
-		phi[i * primes[j]] = (i % primes[j]) ? (primes[j] - 1) * phi[i] : primes[j] * phi[i];
-	}
+    if (!v[i]) v[i] = i, primes[++cnt] = i, phi[i] = i - 1;
+    for (int j = 1; j <= cnt; j++)
+    {
+        if (v[i] > primes[j]) break;
+        v[primes[j] * i] = primes[j];
+        phi[i * primes[j]] = (i % primes[j]) ? (primes[j] - 1) * phi[i] : primes[j] * phi[i];
+    }
 }
 ```
 
@@ -37,18 +40,18 @@ for (int i = 2; i <= n; i++)
 例题：
 给定一个整数 $N$，请你求出 $\sum_{1 \le i \le N}gcd(1, i)$的值。
 
-
-#### 费马小定理:
+### 费马小定理
 
 $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 欧拉定理的特殊情况。
 
-**求逆元**
+应用：
 
-***费马检查配合二次探测定理：Miller Rabin算法**
+- **求逆元**
+- ***费马检查配合二次探测定理：Miller Rabin算法**
 
-#### 威尔逊定理
+### 威尔逊定理
 
 - **证明**
 
@@ -60,20 +63,18 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 #### 裴蜀定理
 
-一定 $\exists x, y\in Z\ \ s.t.\  a * x + b * y = gcd(a, b)$ 成立。
+一定 $\exists x, y\in Z\ \ s.t.\  a \times x + b \times y = gcd(a, b)$ 成立。
 
 - **证明**
 
 两种证明方法。
 
 - **推论**
+  - $a,b$ 互质的充分必要条件是存在整数 $x,y$ 使 $a \times x + b \times y=1$
+  - 设 $a_1,a_2,a_3......a_n$ 为 $n$ 个整数，$d$ 是它们的最大公约数，那么存在整数$x_1......x_n$ 使得 $x_1*a_1+x_2*a_2+...x_n*a_n=d$ 。
+  - $a \times x + b \times y = c$ 有解当且仅当 $c\ |\ gcd(a, b)$
 
-	- $a,b$ 互质的充分必要条件是存在整数 $x,y$ 使 $a * x + b * y=1$
-    - 设 $a_1,a_2,a_3......a_n$ 为 $n$ 个整数，$d$ 是它们的最大公约数，那么存在整数$x_1......x_n$ 使得 $x_1*a_1+x_2*a_2+...x_n*a_n=d$ 。
-    - $a \times x + b \times y = c$ 有解当且仅当 $c\ |\ gcd(a, b)$
-
-例题：
-
+**例题**：
 给定 $K$，$M$ 求一个最小的正整数 $x$,使得 $K^x\equiv 1\pmod M$，如果无解输出 -1 。
 
 数据范围：$2\leq K$，$M\le 2\times 10^9$。
@@ -83,9 +84,10 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 - **概念**
 
 如果您到百度上搜索逆元，您会看到如下定义：（这里逆元素是逆元的全称）
-```
-    逆元素是指一个可以取消另一给定元素运算的元素
-    													---百度百科
+
+```text
+逆元素是指一个可以取消另一给定元素运算的元素
+                                    ---百度百科
 ```
 
 理解：
@@ -97,18 +99,19 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 - **应用：除法取模**
 
 - **求法：**
+  - 扩欧算法
+  - 费马小定理（注意：仅在 p 为质数时成立）
+  - 线性递推:
+    - 证明
 
-	- 扩欧算法
-    - 费马小定理（注意：仅在 p 为质数时成立）
-    - 线性递推:
-    	- 证明
 ```cpp
 inv[1] = fac[1] = inv[0] = fac[0] = 1;
 for (int i = 2; i <= n; i++)
     inv[i] = (p - p / i) * inv[p % i] % p;
 ```
 
-#### 扩展欧几里得算法
+### 扩展欧几里得算法
+
 求解 $a \times x + b \times y = gcd(a, b)$ 的一组特解 $(x_0, y_0)$。
 
 - **通解**
@@ -130,7 +133,9 @@ void exgcd(int a, int b, int &x, int &y)
    x = y, y = z - y * (a / b);
 }
 ```
-#### CRT 中国剩余定理
+
+### CRT 中国剩余定理
+
 假设整数 $m_1, m_2\dots m_n$ 两两互素，则对于任意的整数 $a_1, a_2 \dots a_n$ ，方程组
 
 $$\begin{cases} x \equiv a_1\ ({\rm mod}\ m_1) \\ x\equiv a_2\ ({\rm mod}\ m_2) \\ ... \\ x \equiv a_n\ ({\rm mod}\ m_n)\end{cases}$$
@@ -141,30 +146,35 @@ $$\begin{cases} x \equiv a_1\ ({\rm mod}\ m_1) \\ x\equiv a_2\ ({\rm mod}\ m_2) 
 可以构造出一个解$x=\sum_{i=1}^{k}a_iM_it_i$
 
 - **证明** 展开即可。
+
 ```cpp
 int a[], m[], M[];
 int CRT()
 {
-	int MUL = 1, TJ = 0;
-	for (int i = 1; i <= n; i++)
-		MUL *= m[i], M[i] = MUL / m[i];
-	for (int i = 1; i <= n; i++)
-	{
-		int x, y;
-		exgcd(M[i], m[i], x, y);
-		if (x < 0) x += m[i];
-		TJ += x * M[i] * a[i];
-	}
-	return TJ;
+    int MUL = 1, TJ = 0;
+    for (int i = 1; i <= n; i++)
+        MUL *= m[i], M[i] = MUL / m[i];
+    for (int i = 1; i <= n; i++)
+    {
+        int x, y;
+        exgcd(M[i], m[i], x, y);
+        if (x < 0) x += m[i];
+        TJ += x * M[i] * a[i];
+    }
+    return TJ;
 }
 ```
 
-
 ## 组合数学
 
-#### 可重集排列和可重集组合
-![](https://cdn.luogu.com.cn/upload/image_hosting/w9gkg3ok.png)
-##### 多重集的组合数
+### 可重集排列和可重集组合
+
+![可重集](https://cdn.luogu.com.cn/upload/image_hosting/w9gkg3ok.png)
+
+#### 多重集的排列数
+
+#### 多重集的组合数
+
 从 $n$ 个元素中选取 $m$ 个元素，同一元素允许重复选取，产生的组合数量为 $C_{n + m - 1}^{m - 1}$。
 
 可重集排列：（多组组合）
@@ -176,94 +186,109 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
 
 - **证明**
 
-#### 鸽巢原理
-![](https://cdn.luogu.com.cn/upload/image_hosting/w05insir.png)
-**证明**
+### 鸽巢原理
 
-#### 二项式定理
+![GeChao](https://cdn.luogu.com.cn/upload/image_hosting/w05insir.png)
+
+- **证明**
+
+### 二项式定理
+
 - **证明（分析法）**
 
 #### 容斥原理
+
 - **理解**
+- 并集形式
+- 交集形式（筛法公式）
 
 #### 卡特兰数
+
 - **定义**
 
 - **例子**
-	- 欧拉剖分
+  - 欧拉剖分
+  - 括号匹配
 
 #### 组合杂项
 
 - 组合数的线性预处理
+
 ```cpp
 int C(int x, int y)
 {
-	return fac[x] * inv[x - y] % mod * inv[y] % mod;
+    return fac[x] * inv[x - y] % mod * inv[y] % mod;
 }
 void init()
 {
-	for (int i = 2; i < N; i++)
-	{
-		inv[i] = (mod - mod / i) * inv[i] * inv[mod % i] % mod;
-		fac[i] = fac[i - 1] * fac[i] % mod;
-	}
-	for (int i = 2; i < N; i++)
-		inv[i] = inv[i] * inv[i - 1] % mod;
+    for (int i = 2; i < N; i++)
+    {
+        inv[i] = (mod - mod / i) * inv[i] * inv[mod % i] % mod;
+        fac[i] = fac[i - 1] * fac[i] % mod;
+    }
+    for (int i = 2; i < N; i++)
+        inv[i] = inv[i] * inv[i - 1] % mod;
 }
 
 ```
+
 - 杨辉三角与组合数
-![](https://tse1-mm.cn.bing.net/th/id/R-C.5fcbc7793b20a34c4f5e67f2a156e94f?rik=Q9RaZG75okd2Gg&riu=http%3a%2f%2fwww.rcydt.cn%2fuploadfile%2f2019%2f0430%2f20190430040517860.jpg&ehk=b7E7L1oc9Yz7rP4cbDrDnOawD%2bnRXqSPYETVZ6GV0dA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1)
+![YangHui](https://tse1-mm.cn.bing.net/th/id/R-C.5fcbc7793b20a34c4f5e67f2a156e94f?rik=Q9RaZG75okd2Gg&riu=http%3a%2f%2fwww.rcydt.cn%2fuploadfile%2f2019%2f0430%2f20190430040517860.jpg&ehk=b7E7L1oc9Yz7rP4cbDrDnOawD%2bnRXqSPYETVZ6GV0dA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1)
 - 组合数的性质
+  - $C_{n+1}^m=C_n^m+C_n^{m-1}$
+  - $C_{m+r+1}^r=\sum_{i=0}^r C_{m+i}^i$
+  - $\sum_{i=0}^m C_m^i=2^m$
+  - $C_m^0+C_m^2+C_m^4...=C_m^1+C_m^3+C_m^5+...=2^{m-1}$
+  - $\sum_{i=1}^n C_n^i*i^2=n*(n+1)*2^{n-2}$
+  - $\sum_{i=1}^n C_n^i*i^2=n*(n+1)*2^{n-2}$
+  - $\sum_{i=0}^n (C_n^i)^2=C_{2n}^n$
 
 ## 线性代数
 
-#### 矩阵概念
-![](https://cdn.luogu.com.cn/upload/image_hosting/6aq90t58.png)
+### 矩阵概念
+
+![JuZhen](https://cdn.luogu.com.cn/upload/image_hosting/6aq90t58.png)
+
 $X$ 阶矩阵： 行数与列数都等于 $n$ 的矩阵称为 $n$ 阶矩阵或 $n$ 阶方阵。
 单位矩阵：主对角线上的元素都为 $1$ ，其余元素均为 $0$ 的 $n$ 阶方阵称为 $n$ 阶单位矩阵，记为 $E$。
 逆矩阵：设 $A$ 是一个 $n$ 阶矩阵，若存在另一个 $n$ 阶矩阵 $B$ ，使得： $A \times B = E$
 
 矩阵的迹：
 $n \times n$ 矩阵 $A$ 的对角元素之和称为矩阵A的迹( $trace$ ),记作 $tr(A)$:
-![](https://bkimg.cdn.bcebos.com/formula/6f97cd92926c3bd38460d597dca38f83.svg)
+![Ji](https://bkimg.cdn.bcebos.com/formula/6f97cd92926c3bd38460d597dca38f83.svg)
 
-#### 特殊矩阵
+### 特殊矩阵
 
 - **稀疏矩阵**
 我们知道矩阵是一个由 $m$ 行和 $n$ 列组成的二维数据对象，因此一共有 $m \times n$ 个数值。当这个矩阵的绝大部分数值为零，且非零元素呈不规律分布时，则称该矩阵为稀疏矩阵（ $Sparse\ Matrix$ ）
-与它相对的一个概念叫稠密矩阵，，那些非零数值占大多数元素的矩阵即是稠密矩阵（ $Dense\ Matrix$ ），
+与它相对的一个概念叫稠密矩阵，，那些非零数值占大多数元素的矩阵即是稠密矩阵（ $Dense\ Matrix$ ）。
 
 - **三角矩阵**
 三角矩阵（ $Triangular\ Matrix$ ）分为上三角矩阵和下三角矩阵。
-上三角矩阵（ $Upper\ Triangular\ Matrix$ ）是指主对角线以下元素全为0的矩阵，如：
-![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+0+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+4+%26+5+%5C%5C+0+%26+6+%26+0+%5C%5C+0+%26+0+%263+%5Cend%7Bpmatrix%7D)
-下三角矩阵（Lower Triangular Matrix）是指主对角线以上元素全为0的矩阵，如：
-![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+0+%5C%5C+4+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+0+%26+0+%5C%5C+0+%26+0+%26+0+%5C%5C+4+%26+6+%263+%5Cend%7Bpmatrix%7D)
-
+  - 上三角矩阵（ $Upper\ Triangular\ Matrix$ ）是指主对角线以下元素全为0的矩阵，如：
+![Up](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+0+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+4+%26+5+%5C%5C+0+%26+6+%26+0+%5C%5C+0+%26+0+%263+%5Cend%7Bpmatrix%7D)
+  - 下三角矩阵（Lower Triangular Matrix）是指主对角线以上元素全为0的矩阵，如：
+![Down](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+0+%5C%5C+4+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+0+%26+0+%5C%5C+0+%26+0+%26+0+%5C%5C+4+%26+6+%263+%5Cend%7Bpmatrix%7D)
 
 - **对称矩阵**
 对称矩阵（Symmetric Matrix）是指元素以主对角线为对称轴对应相等的矩阵，例如：
-![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+3+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+5+%26+6+%5C%5C+5+%26+0+%26+7+%5C%5C+6+%26+7+%263+%5Cend%7Bpmatrix%7D)
+![DuiCheng](https://www.zhihu.com/equation?tex=%5Cbegin%7Bpmatrix%7D+1+%26+3+%5C%5C+3+%26+2+%5C%5C+%5Cend%7Bpmatrix%7D+%2C+%5Cquad+%5Cbegin%7Bpmatrix%7D+2+%26+5+%26+6+%5C%5C+5+%26+0+%26+7+%5C%5C+6+%26+7+%263+%5Cend%7Bpmatrix%7D)
 
-#### 矩阵的初等变换
+### 矩阵的初等变换
+
 - 交换两行或两列
-![](https://pic4.zhimg.com/v2-e9426c8380df62896a3cd6c9ce927883_b.webp)
 - 用一个数 $K$ 乘以某一行
-![](https://pic3.zhimg.com/v2-c0caf102be74316b9df45a89fbe918fa_b.webp)
 - 用某个数乘以某一行加到另一行中去
-![]
 
-#### 矩阵的加减乘和转置运算
+### 矩阵的加减乘和转置运算
+
 矩阵的加减乘
-![](https://cdn.luogu.com.cn/upload/image_hosting/5svg43de.png)
+![operator](https://cdn.luogu.com.cn/upload/image_hosting/5svg43de.png)
 
 矩阵的转置运算
-![](https://pic2.zhimg.com/v2-486fa661982257c614058c13a706bb05_r.jpg)
+![ZhuanZhi](https://pic2.zhimg.com/v2-486fa661982257c614058c13a706bb05_r.jpg)
 
-
-
-#### 线性方程组的高斯消元法
+### 线性方程组的高斯消元法
 
 历年NOIP的数学题
 考点：

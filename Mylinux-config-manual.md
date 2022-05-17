@@ -1,31 +1,46 @@
-**1. Set hostname**
-```console
-$ hostnamectl set-hostname new-hostname
+# Config a New Linux System
+
+## 1. Set hostname (Require reboot)
+
+```shell
+hostnamectl set-hostname new-hostname
 ```
 
-**2. Change mirror source** 
-```console
-open software & update
-change mirror sources to domestic source
+## 2. Change mirror source
 
-$ sudo apt update
+1. open software & update
+2. change mirror sources to domestic source
+
+```shell
+sudo apt update
 ```
-**3. Typewriting (require reboot)** 
-```console
-$ sudo apt install ibus-rime
-$ reboot
-$ ibus-setup
+
+## 3. Typewriting (Require reboot)
+
+```shell
+sudo apt install ibus-rime
+reboot
+ibus-setup
+```
+
 Then add Rime to InputMethod && Add Rime to setting- Region & language
+
+## 4. Coding Environment
+
+```shell
+sudo apt install vim
+sudo snap install --classic code
 ```
-**4. Coding Environment**
-```console
-$ sudo apt install vim
-$ sudo snap install --classic code
-# If can't connect to extensions, change the proxy setting to automatic
-$ sudo apt install g++
+
+If can't connect to extensions in vs-code, change the proxy setting to automatic
+
+```shell
+sudo apt install g++
 ```
-**5. System tools**
-```console
-$ sudo apt install screenfetch
-$ screenfetch
+
+## 5. System tools
+
+```shell
+sudo apt install screenfetch
+screenfetch
 ```

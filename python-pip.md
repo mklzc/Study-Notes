@@ -1,18 +1,27 @@
-**set up python3-pip**
-```console
-$ sudo apt update
-$ sudo apt install python3-pip
-$ pip3 --version
-```
-**Use a domestic source with parameter -i like:**
-```console
-$ pip install package -i https://pypi.tuna.tsinghua.edu.cn/simple
+# python pip
 
-Change the download source permanently:
-$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+## set up python3-pip
+
+```shell
+$sudo apt update
+$sudo apt install python3-pip
+$pip3 --version
 ```
 
-**Check the install list**
-```console
-$ pip list
+## Use a domestic source with parameter -i like
+
+```shell
+$pip install package -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## Change the download source permanently
+
+```shell
+$pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+```
+
+## Check the installed list
+
+```shell
+$pip list
 ```

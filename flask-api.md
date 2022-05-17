@@ -1,5 +1,8 @@
+# Flask
+
 First create a virtual environment
 After activating:
-```console
+
+```sh
 sudo pip install flask
 ```

@@ -143,7 +143,7 @@ $$\begin{cases} x \equiv a_1\ ({\rm mod}\ m_1) \\ x\equiv a_2\ ({\rm mod}\ m_2) 
 
 我们设 $M=\prod_{i=1}^{k}m_i$，$ M_i=\frac{M}{m_i}$，$M_it_i≡1\;\;(mod\;\;m_i)$。
 
-可以构造出一个解$x=\sum_{i=1}^{k}a_iM_it_i$
+可以构造出一个解 $x=\sum_{i=1}^{k}a_iM_it_i$
 
 - **证明** 展开即可。
 
@@ -283,13 +283,13 @@ $n \times n$ 矩阵 $A$ 的对角元素之和称为矩阵A的迹( $trace$ ),记�
 ### 矩阵的加减乘和转置运算
 
 矩阵的加减乘
-![operator](https://cdn.luogu.com.cn/upload/image_hosting/5svg43de.png)
+加减法：对应的位置相加减
+数乘：每个位置乘以常数
 
 矩阵的转置运算
 ![ZhuanZhi](https://pic2.zhimg.com/v2-486fa661982257c614058c13a706bb05_r.jpg)
 
-### 线性方程组的高斯消元法
+**矩阵乘法**
+[数学作业](https://www.luogu.com.cn/problem/P3216)
 
-历年NOIP的数学题
-考点：
-式子简化
+### 线性方程组的高斯消元法

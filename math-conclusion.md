@@ -61,7 +61,7 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 给出素数 p，求 $q!\mod p$，其中 $q$ 为比 p 小的最大素数，$p \in [1, 10^9]$。
 
-#### 裴蜀定理
+### 裴蜀定理
 
 一定 $\exists x, y\in Z\ \ s.t.\  a \times x + b \times y = gcd(a, b)$ 成立。
 
@@ -79,7 +79,7 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 数据范围：$2\leq K$，$M\le 2\times 10^9$。
 
-#### 逆元
+### 逆元
 
 - **概念**
 
@@ -196,13 +196,13 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
 
 - **证明**
 
-#### 容斥原理
+### 容斥原理
 
 - **理解**
 - 并集形式
 - 交集形式（筛法公式）
 
-#### 卡特兰数
+### 卡特兰数
 
 - **定义**
 
@@ -213,7 +213,7 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
   - 括号匹配
   - 出栈统计
 
-#### 组合杂项
+### 组合杂项
 
 - 组合数的线性预处理
 
@@ -238,11 +238,11 @@ void init()
 - 杨辉三角与组合数
 ![YangHui](https://tse1-mm.cn.bing.net/th/id/R-C.5fcbc7793b20a34c4f5e67f2a156e94f?rik=Q9RaZG75okd2Gg&riu=http%3a%2f%2fwww.rcydt.cn%2fuploadfile%2f2019%2f0430%2f20190430040517860.jpg&ehk=b7E7L1oc9Yz7rP4cbDrDnOawD%2bnRXqSPYETVZ6GV0dA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1)
 - 组合数的性质
+  - $\frac{i}{n}C_n^i = C_{n - 1}^{i - 1}$
   - $C_{n+1}^m=C_n^m+C_n^{m-1}$
   - $C_{m+r+1}^r=\sum_{i=0}^r C_{m+i}^i$
   - $\sum_{i=0}^m C_m^i=2^m$
   - $C_m^0+C_m^2+C_m^4...=C_m^1+C_m^3+C_m^5+...=2^{m-1}$
-  - $\sum_{i=1}^n C_n^i*i^2=n*(n+1)*2^{n-2}$
   - $\sum_{i=1}^n C_n^i*i^2=n*(n+1)*2^{n-2}$
   - $\sum_{i=0}^n (C_n^i)^2=C_{2n}^n$
 

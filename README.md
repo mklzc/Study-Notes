@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is my study notes about computer learning.
+This is a computer learning notes
 
 ## Content
 
-- algorithm
-- computer system options
+- Algorithm
+- Computer system options

@@ -206,6 +206,9 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
 - 交集形式（筛法公式）
   ![demogen](https://www.zhihu.com/equation?tex=%7C%5Ccap_%7Bi%3D1%7D%5En+%5Coverline%7BA_i%7D%7C%3D%7C%5Coverline%7B%5Ccup_%7Bi%3D1%7D%5En+A_i%7D%7C%3D%7CS%7C-%7C%5Ccup_%7Bi%3D1%7D%5En+A_i%7C+%5C%5C%3D%7CS%7C-%5Csum+%7CA_i%7C%2B%5Csum+%7CA_i%5Ccap+A_j%7C-%5Cldots+%2B%28-1%29%5En+%7C%5Ccap_%7Bi%3D1%7D%5En+A_i%7C+)
 
+例题：
+[Devu and flowers](https://www.luogu.com.cn/problem/CF451E)
+
 ### 卡特兰数
 
 - **定义**
@@ -216,6 +219,9 @@ $x_1 + x_2 + x_3 + \dots + x_n = m$
   - 欧拉剖分
   - 括号匹配
   - 出栈统计
+
+例题：
+[球迷购票问题](https://www.luogu.com.cn/problem/P1754)
 
 ### 组合杂项
 
@@ -307,3 +313,10 @@ $1\le n \le 10^{18}$，$1\le m \le 10^9$。
 ### 线性方程组的高斯消元法
 
 [开关问题](https://www.acwing.com/problem/content/210/)
+
+练习：
+
+- [妖梦拼木棒](https://www.luogu.com.cn/problem/P3799)
+- [GCD](https://www.luogu.com.cn/problem/P2568)
+- [Devu and flowers](https://www.luogu.com.cn/problem/CF451E)
+- [矩阵求逆](https://www.luogu.com.cn/problem/P4783)

@@ -295,7 +295,9 @@ void init()
 
 ### 线性方程组的高斯消元法
 
-[开关问题](https://www.acwing.com/problem/content/210/)
+- 线性方程组求解
+- 异或方程组求解
+- 与线性空间的练习
 
 ## 题目
 
@@ -330,4 +332,4 @@ Tag：欧拉定理
 Tag：数学性质
 
 斜率不同的三条线必定会构成一个三角形。
-相同斜率归为一类，枚举相同斜率
+相同斜率归为一类，枚举每一个类，答案每次加上 $cnt[currentK] \times cnt[smallerK] \times cnt[largerK]$

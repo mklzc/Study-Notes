@@ -1,18 +1,17 @@
 # Git usage
 
-## config user information
+## Config user information
 
 ```sh
 git config --global user.name "user"
 git config --global user.email "userexample.com"
 ```
 
-## open a remote repository
+## Open a remote repository
 
 ```sh
 git remote add origin git@github.com:mklzc/mklzc.git
-git fetch origin master
-git merge FETCH_HEAD
+git pull origin master
 git push origin master
 ```
 
@@ -21,5 +20,14 @@ git push origin master
 ```sh
 git add .
 git commit -m 'message'
-git checkout .
+git push origin master
+```
+
+## Configure a fork repository
+
+```sh
+git remote add upstream git@github.com:operapeking/blog-hexo.
+git checkout master
+git merge upstream/master
+git push origin master
 ```

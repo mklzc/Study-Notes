@@ -27,6 +27,7 @@ git push origin master
 
 ```sh
 git remote add upstream git@github.com:operapeking/blog-hexo.
+git fetch upstream
 git checkout master
 git merge upstream/master
 git push origin master

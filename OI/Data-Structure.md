@@ -18,6 +18,9 @@
 
 #### [一个简单的整数问题](https://www.acwing.com/problem/content/244/)
 
+分块模板题。
+注意 `add[i]` 和 `sum[i]` 中只要有一个改变，另外一个必定改变。
+
 #### [蒲公英](https://www.luogu.com.cn/problem/P4168)
 
 题意：维护区间众数

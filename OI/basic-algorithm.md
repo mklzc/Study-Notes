@@ -48,3 +48,37 @@ $L: \dots a\ b\dots \newline R:\dots c\ d\ e\dots (1\le a\le b, 1\le c\le d\le e
 显然这两种情况都有 $|b - c| > x$
 
 QED.
+
+[田忌赛马](https://www.luogu.com.cn/problem/P1650)
+
+Tag：贪心
+
+假设齐王从强到弱派出马，易知田忌每次的最优策略必然从当前最强的或是最弱的之中产生。
+
+首先将田忌和齐王的马分别排序。
+
+于是考虑四个指针，分别指向当前序列的头部和尾部，每次选择都移动两个指针。
+
+将当前最大值分类讨论：
+
+```cpp
+int work()
+{
+    int *tMin = a + 1, *tMax = a + n, *qMin = b + 1, *qMax = b + n, res = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        if (*tMax > *qMax) // 能赢就赢
+            Max(tMax), Max(qMax), res += 200;
+        else if (*tMax < *qMax) // 不能赢就用最劣换最优
+            Min(tMin), Max(qMax), res -= 200;
+        else if (*tMax == *qMax) // 能平（等价于：用最劣输最优，用最优赢其他一匹马）
+            if (*tMin > *qMin) // 最劣能赢最劣
+                Min(tMin), Min(qMin), res += 200;
+            else if (*tMin < *qMax) // 最劣输最优
+                Min(tMin), Max(qMax), res -= 200;
+            else // 可能最后的时候tMin == tMax == qMin == qMax;
+                Min(tMin), Max(qMax);
+    }
+    return res;
+}
+```

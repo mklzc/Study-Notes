@@ -1,19 +1,12 @@
 # 基础算法（Basic Algorithm）
 
-## 二分
-
-二分适用于答案具有单调性的区间。
-简单来讲，就是二分时，答案只可能出现在其中一个区间。
-
-应用：最大值最小，最小值最大。
-
 ## 题目
 
-[Cipele](https://www.luogu.com.cn/problem/P7305)
+### [Cipele](https://www.luogu.com.cn/problem/P7305)
 
 Tag：二分
 
-使最大值最小且答案明显具有单调性，考虑二分。
+**使最大值最小且答案明显具有单调性，考虑二分。**
 
 在答案的值域上二分，每次检查是否满足条件，是则进入左区间，否则进入右区间。
 
@@ -49,7 +42,7 @@ $L: \dots a\ b\dots \newline R:\dots c\ d\ e\dots (1\le a\le b, 1\le c\le d\le e
 
 QED.
 
-[田忌赛马](https://www.luogu.com.cn/problem/P1650)
+### [田忌赛马](https://www.luogu.com.cn/problem/P1650)
 
 Tag：贪心
 
@@ -82,3 +75,13 @@ int work()
     return res;
 }
 ```
+
+### [Above the Median G](https://www.luogu.com.cn/problem/P3031)
+
+**中位数题目技巧**。将大于等于 $x$ 的数赋值为1，小于 $x$ 的数赋值为0，转化为计算前缀和求解。
+
+此时问题转化为有多少个区间 $[l,r]$ 满足 $s[r]-s[l-1]>0$
+
+上式等价于：$s[r]<s[l-1], l - 1 < r$ 的个数，相当于求解逆序对数目。
+
+归并排序：时间复杂度 $O(N\log{N})$

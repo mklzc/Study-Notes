@@ -14,8 +14,20 @@ export PS1="\u@\h$ "
 xdg-open SoftwareName
 ```
 
-## clean the powershell history
+## clean the powershell history (Windows)
 
 ```ps1
 Remove-Item (Get-PSReadlineOption).HistorySavePath
+```
+
+## Fix the problem of ScLk in Ubuntu
+
+It's likely to get an error when opening the keyboard light.
+Use the following command to fix the problem.
+
+The first line is to open the keyboard light and the second is to close the keyboard light.
+
+```sh
+xset led named 'Scroll Lock'
+xset -led named 'Scroll Lock'
 ```

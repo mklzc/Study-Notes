@@ -11,12 +11,6 @@ source ll-env/bin/activate
 (ll-env)learning-log$ django-admin startproject llog .
 ```
 
-In Windows, you can allow run scripts by type in
-
-```sh
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-```
-
 ## set up database
 
 ```sh

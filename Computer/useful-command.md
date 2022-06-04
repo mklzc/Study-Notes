@@ -31,3 +31,13 @@ The first line is to open the keyboard light and the second is to close the keyb
 xset led named 'Scroll Lock'
 xset -led named 'Scroll Lock'
 ```
+
+## Windows accelerate
+
+Download Dism++ can perfectly solve the problem.
+
+## Allow scripts in windows
+
+```sh
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```

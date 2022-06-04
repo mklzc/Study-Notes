@@ -1,4 +1,4 @@
-# Config a New Linux System
+# Config a New Linux System (Ubuntu)
 
 ## 1. Set hostname (Require reboot)
 
@@ -43,6 +43,9 @@ sudo apt install g++
 ```shell
 sudo apt install screenfetch
 screenfetch
+
+sudo apt install nmon
+nmon
 ```
 
 ## 6. Vmware
@@ -59,4 +62,45 @@ Unistall
 
 ```sh
 sudo /usr/bin/vmware-installer -u vmware-player
+```
+
+## 7. find lost-archives (with photorec in linux)
+
+```sh
+sudo apt install testdisk
+sudo photorec /directories
+sudo apt remove testdisk
+rm ~/photorec*
+```
+
+## Wine setup
+
+Install
+
+```sh
+lscpu
+sudo apt install wine64 (sudo apt install wine32)
+wine --version
+```
+
+Run
+
+```sh
+winecfg
+wine program.exe
+```
+
+Uninstall
+
+```sh
+sudo apt purge wine32 (wine64)
+sudo apt autoremove
+```
+
+## Add a sudo user in a linux system
+
+```sh
+sudo adduser newuser
+sudo chsh -s /bin/bash newuser
+sudo usermod -aG sudo newuser
 ```

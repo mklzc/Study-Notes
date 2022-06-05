@@ -10,7 +10,7 @@
 
 ### 欧拉定理和欧拉函数
 
-欧拉函数：
+#### 欧拉函数
 
 - **概念**：
 $\phi(n)$ 表示 $n$ 以内与 $n$ 互质的数的个数。
@@ -32,12 +32,13 @@ for (int i = 2; i <= n; i++)
 }
 ```
 
-欧拉定理：
+#### 欧拉定理
 
 - **证明**： 简单剩余系
 
 - **推论**：
-  - $a ^ {b} \equiv a ^{b \mod \phi(n)}\pmod n$
+  - $a, n$ 互质时，$a^{b} \equiv a ^{b \bmod \phi(n)}\pmod n$
+    $a, n$ 不互质且 $b >= \phi(n)$ 时：$a^{b} \equiv a^{b \bmod \phi(n) + \phi(n)}\pmod n$
   - 使得 $a^x\equiv 1\pmod n$ 的最小正整数解 $x$ 必定满足 $x|\phi(n)$ 。
 
 ### 费马小定理
@@ -374,3 +375,11 @@ $\sum_{i=1}^{n}{a_i\times b_{n-i+1}}\le \sum_{i=1}^{n}{a_i\times c_i}\le \sum_{i
 由 $\{b_n\}$ 可以确定唯一对应的 $\{a_n\}$
 
 然后求解 $\{b_n\}$ 对应后的下标所构成的序列的逆序对即可。
+
+### [[模板]扩展欧拉定理](https://www.luogu.com.cn/problem/P5091)
+
+模板题。
+
+欧拉定理的性质1。
+
+### [方差](https://www.luogu.com.cn/problem/P1471)

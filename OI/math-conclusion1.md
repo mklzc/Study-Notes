@@ -298,6 +298,16 @@ void init()
 - 异或方程组求解
 - 与线性空间
 
+### 数学结论
+
+#### 被 `x` 整除的 `y` 的特征
+
+设 `y` 为 $\overline{a_{n}a_{n-1}\dots a_{3}a_{2}a_{1}}$
+
+- $x=8$：$8\mid\overline{a_{3}a_{2}a_{1}}$
+- $x=125$：$125\mid\overline{a_{3}a_{2}a_{1}}$
+- $x=11$：$11\mid \left(\lvert \sum{a_{2n-1}}-\sum{a_{2n}}\rvert\right)$
+
 ## 题目
 
 ### [妖梦拼木棒](https://www.luogu.com.cn/problem/P3799)
@@ -378,7 +388,7 @@ $\sum_{i=1}^{n}{a_i\times b_{n-i+1}}\le \sum_{i=1}^{n}{a_i\times c_i}\le \sum_{i
 
 模板题。
 
-欧拉定理的性质1。
+前文欧拉定理的性质1。
 
 ### [方差](https://www.luogu.com.cn/problem/P1471)
 

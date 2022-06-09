@@ -395,3 +395,23 @@ $\sum_{i=1}^{n}{a_i\times b_{n-i+1}}\le \sum_{i=1}^{n}{a_i\times c_i}\le \sum_{i
 思路比较简单的一道题。
 
 暴力展开需要求的方差的式子，容易发现，只需要维护区间平方和与区间和，线段树或树状数组维护即可。
+
+### [约数研究](https://www.luogu.com.cn/problem/P1403)
+
+数据范围其实完全可以再大一点。
+
+$1\sim n$ 中共有 $n/i$ 个 $i$ 的倍数。
+
+故 $\sum_{i=1}^{n}f(n)=\sum_{i=1}^{n}{\lfloor \frac{n}{i}\rfloor}$
+
+整除分块的标准形式，$O(\sqrt{n})$ 解决。
+
+### [余数求和](https://www.luogu.com.cn/problem/P2261)
+
+容易得到：原式$=k \times n-\sum_{i=1}^{n}{i\times \lfloor \frac{k}{i}\rfloor}$
+
+上整除分块。
+
+对于每一块 $[l,r]$ 都有 $\left[l+(l+1)+\dots +r\right]\times \lfloor \frac{k}{l}\rfloor=\frac{1}{2}\times (r-l+1)\times (l + r)\times \lfloor \frac{k}{l}\rfloor$
+
+就可以做了。

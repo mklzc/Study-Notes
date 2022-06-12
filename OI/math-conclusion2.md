@@ -21,9 +21,7 @@
 
 #### 原根
 
-### 完全数
-
-[搜狗百科](https://baike.sogou.com/v774869.htm)
+### [完全数](https://baike.sogou.com/v774869.htm)
 
 ### 狄利克雷卷积
 

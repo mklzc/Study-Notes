@@ -1,5 +1,7 @@
 # 动态规划 Dynamic Programming
 
+我的 `DP` 入门之路。
+
 ## 线性dp
 
 ### 思考
@@ -45,4 +47,4 @@ $if (A[i] \neq B[j]) f[i][j] = f[i - 1][j]$
 
 时间复杂度：$O(N^2)$
 
-#### [Making the Grade](https://www.acwing.com/problem/content/275/)
+#### [最大食物链计数](https://www.luogu.com.cn/problem/P4017)

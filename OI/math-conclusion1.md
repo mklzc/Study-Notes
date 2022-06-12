@@ -24,8 +24,8 @@
 #### 欧拉函数
 
 - **概念**：
-$\phi(n)$ 表示 $n$ 以内与 $n$ 互质的数的个数。
-- **公式**：$\phi(N) = N\times\prod_{Prime\ p | N}{(1 - \frac{1}{p})}$
+$\varphi(n)$ 表示 $n$ 以内与 $n$ 互质的数的个数。
+- **公式**：$\varphi(N) = N\times\prod_{Prime\ p | N}{(1 - \frac{1}{p})}$
 - **求法**：线性筛
 
 ```cpp
@@ -45,14 +45,14 @@ for (int i = 2; i <= n; i++)
 
 #### 欧拉定理
 
-当 $a,n$ 互质时，$a^{\phi(n)}\equiv 1\pmod n$
+当 $a,n$ 互质时，$a^{\varphi(n)}\equiv 1\pmod n$
 
 - **证明**： 简单剩余系
 
 - **推论**：
-  - $a, n$ 互质时，$a^{b} \equiv a ^{b \bmod \phi(n)}\pmod n$
-    $a, n$ 不互质且 $b >= \phi(n)$ 时：$a^{b} \equiv a^{b \bmod \phi(n) + \phi(n)}\pmod n$
-  - 使得 $a^x\equiv 1\pmod n$ 的最小正整数解 $x$ 必定满足 $x|\phi(n)$ 。
+  - $a, n$ 互质时，$a^{b} \equiv a ^{b \bmod \varphi(n)}\pmod n$
+    $a, n$ 不互质且 $b >= \varphi(n)$ 时：$a^{b} \equiv a^{b \bmod \varphi(n) + \varphi(n)}\pmod n$
+  - 使得 $a^x\equiv 1\pmod n$ 的最小正整数解 $x$ 必定满足 $x|\varphi(n)$ 。
 
 ### 费马小定理
 
@@ -231,21 +231,20 @@ $(x+y)^n = \sum_{k = 0}^{n}{C_n^{k}\times x^k \times y^{n - k}}$
 - 组合数的线性预处理
 
 ```cpp
-LL C(int x, int y) {
-    return fac[x] * inv[x - y] % mod * inv[y] % mod;
+LL Combine(int x, int y) {
+    return fac[x] * inv[x - y] % P * inv[y] % P;
 }
-void init()
+void Init()
 {
     inv[0] = inv[1] = fac[0] = fac[1] = 1;
     for (int i = 2; i < N; i++)
     {
-        inv[i] = (mod - mod / i) * inv[i] * inv[mod % i] % mod;
-        fac[i] = fac[i - 1] * fac[i] % mod;
+        inv[i] = (P - P / i)% P * inv[P % i] % P;
+        fac[i] = fac[i - 1] * i % P;
     }
     for (int i = 2; i < N; i++)
-        inv[i] = inv[i] * inv[i - 1] % mod;
+        inv[i] = inv[i] * inv[i - 1] % P;
 }
-
 ```
 
 - 杨辉三角与组合数

@@ -5,8 +5,19 @@
 ### 同余式
 
 - **基本概念**
-- **一些性质**
+  $a$ 与 $b$ 在模 $n$ 的意义下同余，记作 $a\equiv b\pmod n$
+
+  也可简记为 $a\equiv b(n)$
+
 - **同余类、剩余系**
+
+  - **同余类：** 模 $n$ 同余的所有整数组成的集合称为同余类，共有 $n$ 个同余类。
+
+  - **剩余系：** 对于某一个特定的正整数 $n$ ，一个整数集中的数模 $n$ 所得的余数域。
+
+  - **完全剩余系：** 设 $m\in \mathbb{Z^+}$ ，若 $r_0,r_1\dots r_{m-1}$ 为 $m$ 个整数，并且两两模 $m$ 不同余，则 $r_0,r_1,\dots r_{m-1}$叫作模 $m$ 的一个完全剩余系。
+
+  - **简化剩余系：** 也称既约剩余系或缩系，是 $m$ 的完系中与 $m$ 互质的数构成的子集。
 
 ### 欧拉定理和欧拉函数
 
@@ -34,6 +45,8 @@ for (int i = 2; i <= n; i++)
 
 #### 欧拉定理
 
+当 $a,n$ 互质时，$a^{\phi(n)}\equiv 1\pmod n$
+
 - **证明**： 简单剩余系
 
 - **推论**：
@@ -43,9 +56,11 @@ for (int i = 2; i <= n; i++)
 
 ### 费马小定理
 
-$a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
+一般形式：$a^{n} \equiv a\pmod n$，当 $n$ 为素数时成立。
 
-费马小定理是 $p$ 为素数的必要条件。
+常见形式：$a^{n-1}\equiv 1\pmod n$，当 $n$ 为素数且 $a$ 与 $n$ 互质时成立。
+
+费马小定理是 $n$ 为素数的必要非充分条件。
 
 **证明**：欧拉定理的特殊情况。
 
@@ -56,7 +71,7 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 ### 威尔逊定理
 
-- **证明**：逆元配对
+- **证明**：逆元配对。
 - **应用**
 
 例题：
@@ -76,7 +91,7 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
   - $a \times x + b \times y = c$ 有解当且仅当 $c\ |\ gcd(a, b)$
 
 **例题**：
-给定 $K$，$M$ 求一个最小的正整数 $x$,使得 $K^x\equiv 1\pmod M$，如果无解输出 -1 。
+给定 $K$，$M$ 求一个最小的正整数 $x$,使得 $K^x\equiv 1\pmod M$，如果无解输出 $-1$。（阶？）
 
 数据范围：$2\leq K$，$M\le 2\times 10^9$。
 
@@ -84,18 +99,12 @@ $a^{p - 1} \equiv 1\pmod p$，当 p 为素数时成立。
 
 - **概念**
 
-如果您到百度上搜索逆元，您会看到如下定义：（这里逆元素是逆元的全称）
-
 ```text
 逆元素是指一个可以取消另一给定元素运算的元素
                                     ---百度百科
 ```
 
-理解：
-
-举个例子，如果一个数 $F$ 乘一个数 $a$ 后，再乘它的倒数 $\frac {1} {a}$，相当于没有乘 $a$，换句话说，我们乘上 $\frac {1} {a}$ 后，取消了代数式 $F$ 乘 $a$ 后值增大的影响。
-
-不难发现这符合逆元的定义，故我们可以说一个数和其倒数互为乘法逆元。除此之外，我们还能发现一个数和其相反数互为加法逆元等等……
+很好理解，比如，一个数和它的相反数互为加法逆元……。
 
 - **应用：除法取模**
 
@@ -268,12 +277,12 @@ void init()
 与它相对的一个概念叫稠密矩阵，，那些非零数值占大多数元素的矩阵即是稠密矩阵（ $Dense\ Matrix$ ）。
 
 - **三角矩阵**
-三角矩阵（ $Triangular\ Matrix$ ）分为上三角矩阵和下三角矩阵。
-  - 上三角矩阵（ $Upper\ Triangular\ Matrix$ ）是指主对角线以下元素全为0的矩阵。
-  - 下三角矩阵（Lower Triangular Matrix）是指主对角线以上元素全为0的矩阵。
+三角矩阵（ $TriangularMatrix$ ）分为上三角矩阵和下三角矩阵。
+  - 上三角矩阵（ $UpperTriangularMatrix$ ）是指主对角线以下元素全为0的矩阵。
+  - 下三角矩阵（ $LowerTriangularMatrix$ ）是指主对角线以上元素全为0的矩阵。
 
 - **对称矩阵**
-对称矩阵（Symmetric Matrix）是指元素以主对角线为对称轴对应相等的矩阵。
+对称矩阵（$SymmetricMatrix$）是指元素以主对角线为对称轴对应相等的矩阵。
 
 ### 矩阵的初等变换
 
@@ -287,58 +296,58 @@ void init()
 
 - 加减法：对应的位置相加减
 - 数乘：每个位置乘以常数
-- 矩阵的转置运算
+- 矩阵的转置运算：
   矩阵 $A$ 的转置矩阵记为 $A^T$
   它是将 $A$ 的第 $j$ 行变为第 $j$ 列，第 $k$ 列变为第 $k$ 行所得到的矩阵。
 
 - **矩阵乘法**
-  理解：(线性方程组)
+  理解：(与线性方程组之间的关系)
 
 ### 线性方程组的高斯消元法
 
 - 线性方程组求解
 - 异或方程组求解
-- 与线性空间的练习
+- 与线性空间
 
 ## 题目
 
 ### [妖梦拼木棒](https://www.luogu.com.cn/problem/P3799)
 
-Tag：组合数
+**Tag:**  组合数
 注意数据范围，暴力枚举求解。
 
 ### [GCD](https://www.luogu.com.cn/problem/P2568)
 
-Tag：欧拉函数
+**Tag:**  欧拉函数
 将数拆分表示，观察到互质性质，利用欧拉函数求解。
 
 ### [Devu and flowers](https://www.luogu.com.cn/problem/CF451E)
 
-Tag：容斥原理，组合数
-容斥原理，配上可重集组合数。
-通过状态压缩技巧实现容斥。
+**Tag:**  容斥原理，组合数
+
+容斥原理，配上可重集组合数，通过状态压缩技巧实现容斥。
 
 ### [矩阵求逆](https://www.luogu.com.cn/problem/P4783)
 
-Tag：线性代数
+**Tag:**  线性代数
 
 ### [球迷购票问题](https://www.luogu.com.cn/problem/P1754)
 
-Tag：卡特兰数
+**Tag:**  卡特兰数
 
 ### [数学作业](https://www.luogu.com.cn/problem/P3216)
 
-Tag：矩阵乘法
+**Tag:**  矩阵乘法
 
 ### [按钮](https://www.luogu.com.cn/problem/P4861)
 
-Tag：欧拉定理
+**Tag:**  欧拉定理，阶的概念
 
 裴蜀定理判断有无整数解，利用欧拉定理的性质2求解。
 
 ### [TROKUTI](https://www.luogu.com.cn/problem/P7676)
 
-Tag：数学性质
+**Tag:**  数学性质
 
 斜率不同的三条线必定会构成一个三角形。
 相同斜率归为一类，枚举每一个类，答案每次加上 $cnt[currentK] \times cnt[smallerK] \times cnt[largerK]$
@@ -356,7 +365,7 @@ Tag: 约数和定理
 
 ### [火柴排队](https://www.luogu.com.cn/problem/P1966)
 
-Tag：排序不等式
+**Tag:**  排序不等式
 
 设有数列 $\{a_n\}$ 和 $\{b_n\}$ 按照升序排列。设 $\{c_n\}$ 是 $\{b_n\}$ 乱序排列构成的数列。
 
@@ -378,8 +387,76 @@ $\sum_{i=1}^{n}{a_i\times b_{n-i+1}}\le \sum_{i=1}^{n}{a_i\times c_i}\le \sum_{i
 
 ### [[模板]扩展欧拉定理](https://www.luogu.com.cn/problem/P5091)
 
+**Tag:** 扩展欧拉定理
+
 模板题。
 
-欧拉定理的性质1。
+前文欧拉定理的性质1。
 
 ### [方差](https://www.luogu.com.cn/problem/P1471)
+
+**Tag:** 基础数学，线段树
+
+思路比较简单的一道题。
+
+暴力展开需要求的方差的式子，容易发现，只需要维护区间平方和与区间和，线段树或树状数组维护即可。
+
+### [约数研究](https://www.luogu.com.cn/problem/P1403)
+
+**Tag:** 整除分块
+
+数据范围其实完全可以再大一点。
+
+$1\sim n$ 中共有 $n/i$ 个 $i$ 的倍数。
+
+故 $\sum_{i=1}^{n}f(n)=\sum_{i=1}^{n}{\lfloor \frac{n}{i}\rfloor}$
+
+整除分块的标准形式，$O(\sqrt{n})$ 解决。
+
+### [余数求和](https://www.luogu.com.cn/problem/P2261)
+
+**Tag:**  整除分块
+
+容易得到：原式$=k \times n-\sum_{i=1}^{n}{i\times \lfloor \frac{k}{i}\rfloor}$
+
+上整除分块。
+
+对于每一块 $[l,r]$ 都有 $\left[l+(l+1)+\dots +r\right]\times \lfloor \frac{k}{l}\rfloor=\frac{1}{2}\times (r-l+1)\times (l + r)\times \lfloor \frac{k}{l}\rfloor$
+
+就可以做了。
+
+### [回首过去](https://www.luogu.com.cn/problem/P6583)
+
+形如 $\frac{x}{y}$ 能表示为十进制有限小数形式，当且仅当 $\frac{x}{y}$ 的最简分数形式的分母只含有质因子 $2,5$。
+
+**证明**：设有一个分数 $\frac{x}{y}$ 满足上述条件。
+
+- 任意十进制有限小数都可以表示成 $i \times 10^k,i、k\in \mathbb{Z}$ 的形式，$i$ 做分子，$10^k$ 做分母时，约分后显然可以表示成 $\frac{x}{y}$ 的形式。
+
+- 任意 $\frac{x}{y}$ 也可以表示为 $i\times 10^k$ 的形式。
+
+综上所述，$\frac{x}{y}$ 与十进制有限小数是一一对应的关系，于是命题得证。
+
+**思路**：
+
+将满足条件的分数表示为 $\frac{b\times c}{a\times c}$。
+
+其中 $a$ 只含有质因子 $2,5$，$c$ 不含有质因子 $2,5$。
+
+$a、b、c\in \mathbb{Z}$ 且 $a\times c \le n \&\& b\times c \le n$
+
+预处理出 $a$。
+
+考虑枚举 $c$，然后 `while` 枚举满足 $a\times c\le n$ 的 $a$ 。由于 $a$ 的个数始终单调递减，故每次 $while\ a[cnt]\le \lfloor\frac{n}{c}\rfloor:cnt-1$，$cnt$ 即为 $a$ 的个数。
+
+对于每个这样的 $a,c$，$b$ 有 $\lfloor\frac{n}{c}\rfloor$ 种可能。于是 $ans+\lfloor\frac{n}{c}\rfloor \times cnt$。
+
+但是 $n\le 10^{12}$。。。
+
+设 $f(x)$ 表示 $[1,x]$ 内 $a$ 的个数。
+
+将答案表示为 $\sum_{c}{f(\lfloor\frac{c}{n}\rfloor)}\times \lfloor \frac{n}{c}\rfloor$。
+
+想到整除分块。但是 $c$ 并不连续，所以每一块的 `length` 即为 $[l,r]$ 内 $c$ 的个数。容斥 $2,5$ 计算即可。
+
+$ans + length\times cnt\times \lfloor\frac{n}{c}\rfloor$

@@ -49,7 +49,18 @@ for (int i = 2; i <= n; i++)
 
 当 $a,n$ 互质时，$a^{\varphi(n)}\equiv 1\pmod n$
 
-- **证明**： 简单剩余系
+- **证明**：
+  设 $a_1,a_2,a_3\dots a_{\varphi(n)}$ 构成 $\bmod~n$ 意义下的简化剩余系。
+
+  $\forall i,j \in [1, \varphi(n)], a_i \times a\not \equiv a_j\times a$
+
+  所以 $\forall i \in [1, \varphi(n)], a_i\times a$ 也构成 $\bmod~n$ 意义下的简化剩余系。
+
+  $a^{\varphi(n)}\times a_1 \times a_2 \dots a_{\varphi(n)}\equiv (a\times a_1)\times (a\times a_2)\dots (a\times a_{\varphi(n)})\pmod n$
+
+  将式子两边的 $\bmod~n$ 的简化剩余系消去，就可以得到：
+
+  $a^{\varphi(n)}\equiv 1\pmod n$
 
 - **推论**：
   - $a, n$ 互质时，$a^{b} \equiv a ^{b \bmod \varphi(n)}\pmod n$
@@ -58,15 +69,19 @@ for (int i = 2; i <= n; i++)
 
 ### 费马小定理
 
-一般形式：$a^{n} \equiv a\pmod n$，当 $n$ 为素数时成立。
+一般形式：$a^{p} \equiv a\pmod p$，当 $p$ 为素数时成立。
 
-常见形式：$a^{n-1}\equiv 1\pmod n$，当 $n$ 为素数且 $a$ 与 $n$ 互质时成立。
+常见形式：$a^{p-1}\equiv 1\pmod p$，当 $p$ 为素数且 $a$ 与 $p$ 互质时成立。
 
 费马小定理是 $n$ 为素数的必要非充分条件。
 
-**证明**：欧拉定理的特殊情况。
+**证明**：
 
-应用：
+$a\nmid p:$ 由欧拉定理 $\varphi(p)=p-1$ 知 $a^{p}\equiv p\pmod p$ 成立。
+
+$a\mid p:$ $a^p\equiv 0\equiv a\pmod p$
+
+**应用：**
 
 - **求逆元**
 - ***费马检查配合二次探测定理：Miller Rabin算法**
@@ -120,6 +135,7 @@ $a$ 的乘法逆元为满足 $a\times b\equiv \pmod n$ 的 $b$。
   - 费马小定理（注意：仅在 p 为质数时成立）
     $a\times a^{p-2}\equiv 1\pmod n$
   - 线性递推：
+  
     ```cpp
     inv[1] = fac[1] = inv[0] = fac[0] = 1;
     for (int i = 2; i <= n; i++)

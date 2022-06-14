@@ -2,20 +2,11 @@
 
 我的 `DP` 入门之路。
 
-## 线性dp
+## 题目
 
-### 思考
+### [Mr's Young's Picture Permutation](https://www.acwing.com/problem/content/273/)
 
-推解转移方程时的两种思路：
-
-1. 如何计算出一个状态。
-2. 当前状态可以更新后续哪些状态。
-
-### 例题
-
-#### [Mr's Young's Picture Permutation](https://www.acwing.com/problem/content/273/)
-
-##### 思路
+#### 思路
 
 考虑将人按身高降序安排。
 
@@ -29,7 +20,7 @@ $\ \ \ f[a_1]\dots f[a_i + 1]\dots f[a_5]+=f[a_1][a_2][a_3][a_4][a_5]$
 初始化：
 $f[0][0][0][0][0] = 1$
 
-#### [LCIS](https://www.acwing.com/problem/content/274/)
+### [LCIS](https://www.acwing.com/problem/content/274/)
 
 思路：
 
@@ -47,4 +38,14 @@ $if (A[i] \neq B[j]) f[i][j] = f[i - 1][j]$
 
 时间复杂度：$O(N^2)$
 
-#### [最大食物链计数](https://www.luogu.com.cn/problem/P4017)
+### [最大食物链计数](https://www.luogu.com.cn/problem/P4017)
+
+`f[x]` 表示以 `x` 结尾的最大食物链条数。
+
+```text
+动态规划对状态空间的遍历构成一张有向无环图，遍历顺序就是该有向无环图的一个拓朴序。
+```
+
+那么对于这道题而言，食物网构成一张有向无环图，遍历也应该是一个拓朴序。
+
+考虑在拓朴排序时，用当前节点 `x` 更新其子节点 `y`，即 `f[y] += f[x]`。

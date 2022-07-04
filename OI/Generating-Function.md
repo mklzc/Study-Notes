@@ -82,8 +82,21 @@ $$
 
 ### 求解递归式通项公式
 
-不常用
-
 例：
 
 求满足 $a_n=2\times a_{n-1} + 1$ 的 $a_n$ 的通项公式。
+
+构造 $F(x)=0+a_1 \times x+a_2 \times x^{2}+\dots +a_n\times x^n$
+
+$$F(x)-2x\times F(x) = (a_2-2\times a_1)x^2+(a_3-2\times a_2)x^3+\dots (a_n-2\times a_{n-1})x^n+\dots
+\\
+\to (1-2x)F(x)=x^2+x^3+\dots x^n\dots
+\\
+\to F(x)=\frac{x}{(1-x)\times (1-2x)}
+\\
+\to F(x)=\frac{1}{1-2x}-\frac{1}{1-x}
+\\
+\to F(x) = 2+2x^2+4x^2+\dots2^{n}x^{n}-1-x-x^2-x^3-\dots x^n
+\\
+\to a_n=2^n-1
+$$

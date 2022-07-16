@@ -1,5 +1,23 @@
 # 群论
 
+## 有限集的映射
+
+（前置知识）
+
+设两集合 $X={1, 2, 3\dots n}$ 和 $A={a_1, a_2\dots a_n}$。
+
+$X$ 到 $A$ 的一个对应规则称为一个映射，记作：$\varphi=\begin{pmatrix}1&2&\dots&n\\a_1&a_2&\dots&a_n\end{pmatrix}$
+
+$a_i=\varphi(1)$ 表示 $X$ 的对象 $i$ 对应 $A$ 的对象 $a_i$。
+
+- 满映射：$\forall a\in A, \exists~i\in X,\text{ s.t. } a=\varphi(i)$，则映射 $\varphi$ 称为 `满映射` 或 `满射`。
+
+- 单射：对于 $i,j\in X$ 如果有 $i\neq j$ 可推出 $\varphi(i)\neq \varphi(j)$，或者有 $\varphi(i)=\varphi(j)$ 可推出 $i=j$，则映射 $\varphi$ 称为 `一对一映射` 或 `单射`。
+
+- 双射：如果映射 $\varphi$ 既是单射又是满射，则映射 $\varphi$ 称为双射。
+
+满射，单射，双射的必要条件分别是 $|X|\ge |A|, |X|\le |A|$ 和 $|X|=|A|$。
+
 ## 群的基本概念
 
 给定一个非空集合 $G$，和其上的二元运算 $*$，满足如下性质：
@@ -8,9 +26,9 @@
 
 2. 结合律：$\forall a,b,c\in G(a*b)*c=a*(b*c)$
 
-3. 存在单位元：$\exists e\in G, s.t. \forall a\in G$ 满足 $a*e=e*a=a$
+3. 存在单位元：$\exists e\in G,\text{ s.t. }\forall a\in G$ 满足 $a*e=e*a=a$
 
-4. 存在逆元：对于任意 $a\in G.\exists b~s.t.~a*b=b*a=e$（记 $b$ 为 $a^{-1}$）
+4. 存在逆元：对于任意 $a\in G.\exists~b\in G,\text{ s.t. }a*b=b*a=e$（记 $b$ 为 $a^{-1}$）
 
 就称 $G$ 对于 $*$ 运算成群，记为 $(G,*)$ 。
 
@@ -39,7 +57,7 @@ $e_1=e_1*e_2=e_2\to$ 矛盾。
 
 那么 $a*b=a=a*c$ 于是由 `性质1.2` 可知 $b=c$，矛盾。
 
-性质1.4 任意一个元素的逆元的逆元是其本身。
+**性质1.4** 任意一个元素的逆元的逆元是其本身。
 
 设 $b$ 是 $a^{-1}$ 的逆元，则有 $b*a^{-1}=e=a^{-1}*a$，于是由 `性质1.2` 可知 $a=b$。
 
@@ -168,7 +186,7 @@ $E_k*Z_k=|G|$。
 
 **定理 3.3** 称 $E_{1\sim n}$ 中本质不同的个数为等价类个数，设为 $L$。
 
-有：$L=\frac{1}{|G|}\sum_{p\in G}c(p)$
+有：$\displaystyle L=\frac{1}{|G|}\sum_{p\in G}c(p)$
 
 简单来说，就是 **等价类个数=各个置换中不动点个数的平均值**。
 
@@ -197,7 +215,7 @@ $E_k*Z_k=|G|$。
 
 **定理 3.4** 用 $m$ 种颜色，涂染 $n$ 个对象，则不同的染色方案为：
 
-$L=\frac{1}{|G|}\sum_{p\in G}{m^{d(p)}}$。其中 $d(p)$ 为置换 $p$ 的轮换个数。
+$\displaystyle L=\frac{1}{|G|}\sum_{p\in G}{m^{d(p)}}$。其中 $d(p)$ 为置换 $p$ 的轮换个数。
 
 #### 理解
 
@@ -242,18 +260,18 @@ $$
 
 在一个置换中显然一个轮换必须染上相同的颜色才能使得染色方案 `不动`，不同的轮换间互不影响，于是可以得出有 $m^{d(p)}$ 中染色方案。
 
-综上即是 $Polya$ 原理：$L=\frac{1}{|G|}\sum_{p\in G}{m^{d(p)}}$。
+综上即是 $Polya$ 原理：$\displaystyle L=\frac{1}{|G|}\sum_{p\in G}{m^{d(p)}}$。
 
 ## 练习
 
 ### [[模板]Pólya 定理](https://www.luogu.com.cn/problem/P4980)
 
-套上 $Polya$ 定理即可。
-
 将置换看作：旋转 $1,2\dots n$ 次，于是 $|G|=n$。
 
-容易发现旋转 $i$ 次的轮换有 $gcd(n,i)$ 个。
+容易发现旋转 $i$ 次的置换的轮换有 $gcd(n,i)$ 个。
 
 所以 $L=\frac{1}{n}\sum_{i = 1}^{n}{m^{gcd(n, i)}}$
 
 ### [魔力环](https://www.luogu.com.cn/problem/P4916)
+
+[题解](https://www.luogu.com.cn/blog/command-block/solution-p4916)。

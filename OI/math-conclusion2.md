@@ -33,39 +33,7 @@
 
 它能表示为下列形式之一：$2,4,p^n,2\times p^n$，其中 $p$ 为奇素数。
 
-### BSGS 算法
-
-$Baby~Step, Giant~Step$，大步小步算法。
-
-#### 思路
-
-求解高次同余方程：
-
-给定整数 $a,b,p$，其中 $\mathbf{a,p}$ **互质**，求一个非负整数 $x$，使得 $a^x\equiv b\pmod p$
-
-朴素算法概述：
-
-考虑一个暴力算法，在 $\bmod~p$ 的意义下，$a^x$ 显然有一个长度为 $\varphi(p)$ 的循环节，所以只需要考虑 $x\le varphi(p)$ 的情况即可。
-
-暴力枚举 `x` 求解，时间复杂度 $O(\varphi(p))$，最坏 $O(p-1)$
-
-**BSGS** :
-
-运用类似于 **拆半搜索** 的思想，将 `x` 表示成 $i\times t - j$ 的形式。
-
-于是原式 $\to a^{i\times t}\equiv b\times a^{j}\pmod p$
-
-固定 `t` 的值，预处理出右式所有可能的取值。
-
-枚举计算左式可能的值，当枚举到某个在右边已经出现过的值时，此时 $i\times t - j$ 就是我们要求的 `x`。
-
-`t` 的取值：
-
-$j$ 的取值有 $\varphi(m) \bmod t=t-1$ 个，$i$ 的取值有 $\lceil\frac{\varphi(m)}{t}\rceil$。
-
-$t$ 取 $\sqrt{\varphi(m)}$ 时有最优复杂度，但为避免计算 $\varphi(m)$，近似取 $t=\sqrt{m}$ 即可。
-
-时间复杂度 $O(\sqrt{m})$
+### [BSGS](https://www.cnblogs.com/mklzc/p/16489129.html)
 
 ### [完全数](https://baike.sogou.com/v774869.htm)
 

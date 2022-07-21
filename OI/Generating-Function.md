@@ -84,7 +84,7 @@ $F(x)=1+\frac{x}{1!}+\frac{x^2}{2!}+\dots +\frac{x^n}{n!}+\dots=e^x$
 
 例 $2$：数列 $1, -1, 1, -1, 1, -1, 1\dots$ 的母函数。
 
-$F(x)=1-\frac{x}{1!}+\frac{x^2}{2!}-\dots +(-1)^n\times \frac{x^n}{n!}+\dots = e^{-x}$
+$F(x)=1-\frac{x}{1!}+\frac{x^2}{2!}-\dots + (-1)^n\times \frac{x^n}{n!}+\dots = e^{-x}$
 
 例 $3$：数列 $1，a, a^2, a^3\dots$ 的指数型母函数。
 
@@ -120,7 +120,7 @@ $F(x)=\sum_{n=0}^{\infty}{a^n\times \frac{x^n}{n!}}=e^{ax}$
 
 ### 求解递归式通项公式
 
-例1：
+例 $1$：
 
 求满足 $a_n=2\times a_{n-1} + 1$ 的 $a_n$ 的通项公式。
 

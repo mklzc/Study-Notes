@@ -42,11 +42,13 @@ time < 1h
 
 1. 完成二项式反演博客题目部分
 
-已完成：
+已完成（星期一清理）：
 
 1. 完成反演原理博客($\checkmark$)
 
 2. 完成二项式反演博客定理部分($\checkmark$)
+
+3. 完成杜教筛博客($\checkmark$)
 
 ## 待读博客
 
@@ -80,10 +82,6 @@ time < 2h
 
 time < 30min
 
-- [同余系基本定理1](https://www.luogu.com.cn/blog/command-block/tong-yu-xi1)
-
-time < 15min
-
 - [狄利克雷生成函数浅谈](https://www.luogu.com.cn/blog/gxy001/di-li-ke-lei-sheng-cheng-han-shuo-qian-tan)
 
 time < 1h
@@ -100,6 +98,8 @@ time < 1h
 
 time < 2h
 
+已读：
+
 1. [炫酷反演魔术](https://www.luogu.com.cn/blog/command-block/xuan-ku-fan-yan-mo-shu) （二项式反演定理部分）（$\checkmark$）
 
-2. 
+2. [同余系基本定理1](https://www.luogu.com.cn/blog/command-block/tong-yu-xi1) ($\checkmark$)

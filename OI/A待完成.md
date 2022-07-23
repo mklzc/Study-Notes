@@ -1,8 +1,6 @@
 # TO DO LIST
 
-- 完成反演原理博客
-
-time < 1h
+## 待做题目
 
 - 生成函数 [小朋友和二叉树](https://www.luogu.com.cn/problem/CF438E)
 
@@ -38,15 +36,33 @@ time < 1h
 
 题解：[command_block](https://www.luogu.com.cn/blog/command-block/post-shuo-xue-ji-lu-51nod1236-xu-lie-qiu-hu-v3-post)
 
-待读博客
+## 待办事项
 
-- [炫酷反演魔术](https://www.luogu.com.cn/blog/command-block/xuan-ku-fan-yan-mo-shu)
+未完成：
+
+1. 完成二项式反演博客题目部分
+
+已完成：
+
+1. 完成反演原理博客($\checkmark$)
+
+2. 完成二项式反演博客定理部分($\checkmark$)
+
+## 待读博客
 
 - [浅谈生成函数之EGF](https://zhuanlan.zhihu.com/p/53079223)
 
 - [生成函数进阶与简单的图计数](https://www.luogu.com.cn/blog/lx-2003/generating-function-advanced)
 
 time: < 1h 30min
+
+- [多项式学习笔记（三）： 多项式全家桶 - genshy - 博客园](https://www.cnblogs.com/genshy/p/14260473.html)
+
+time < 30min
+
+- [多项式学习笔记（四）： 多项式计数基础 - genshy - 博客园](https://www.cnblogs.com/genshy/p/14419985.html)
+
+time < 30min
 
 - [多项式计数杂谈](https://www.luogu.com.cn/blog/command-block/sheng-cheng-han-shuo-za-tan#)
 
@@ -83,3 +99,7 @@ time < 1h
 - [浅谈斯特林数及斯特林反演](https://www.luogu.com.cn/blog/efforts-will-pay-off/qian-tan-si-te-lin-shuo-ji-si-te-lin-fan-yan)
 
 time < 2h
+
+1. [炫酷反演魔术](https://www.luogu.com.cn/blog/command-block/xuan-ku-fan-yan-mo-shu) （二项式反演定理部分）（$\checkmark$）
+
+2. 

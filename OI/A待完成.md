@@ -2,6 +2,8 @@
 
 ## 待做题目
 
+- [[TJOI2009]猜数字](https://www.luogu.com.cn/problem/P3868)
+
 - 生成函数 [小朋友和二叉树](https://www.luogu.com.cn/problem/CF438E)
 
 time < 1h
@@ -9,6 +11,8 @@ time < 1h
 - 生成函数 [城市规划](https://www.luogu.com.cn/problem/P4841)
 
 time < 1h
+
+- 最短路 [旅行者](https://www.luogu.com.cn/problem/P5304)
 
 - 生成函数 [整数的lqp拆分](https://www.luogu.com.cn/problem/P4451)
 
@@ -35,6 +39,12 @@ time < 1h 30min
 time < 1h
 
 题解：[command_block](https://www.luogu.com.cn/blog/command-block/post-shuo-xue-ji-lu-51nod1236-xu-lie-qiu-hu-v3-post)
+
+已完成：
+
+1. 二项式反演 [[TJOI2019]唱、跳、rap和篮球 - 洛谷](https://www.luogu.com.cn/problem/P5339)
+
+2. prufer 序列 [[HNOI2004]树的计数 - 洛谷](https://www.luogu.com.cn/problem/P2290)
 
 ## 待办事项
 
@@ -72,7 +82,7 @@ time < 5h
 
 - [生成函数再入门](https://www.luogu.com.cn/blog/zyxxs/x-yi-x-jiang-tan-sheng-cheng-han-shuo-zai-ru-men)
 
-time < 1h
+time < 30min
 
 - [群论学习笔记](https://www.luogu.com.cn/blog/Troverld/qun-lun-xue-xi-bi-ji)
 

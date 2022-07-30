@@ -39,3 +39,7 @@ $prufer$ 序列是无根树的序列化表示，有标号的无根树与长度�
 也可以用指针维护：时间复杂度 $O(n)$。
 
 不过 $prufer$ 序列的主要作用不在于如何构造或还原一棵树，它的主要应用在于对无标号图的组合计数。
+
+题目：[[HNOI2004]树的计数 - 洛谷](https://www.luogu.com.cn/problem/P2290)
+
+题解：[树的计数](https://www.cnblogs.com/mklzc/p/16525013.html)

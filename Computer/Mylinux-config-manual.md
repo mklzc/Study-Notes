@@ -43,9 +43,6 @@ sudo apt install g++
 ```shell
 sudo apt install screenfetch
 screenfetch
-
-sudo apt install nmon
-nmon
 ```
 
 ## 6. Vmware

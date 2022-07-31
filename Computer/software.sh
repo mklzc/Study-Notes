@@ -41,12 +41,3 @@ PackageInstall "vim" "是否下载命令行文本编辑器vim"
 PackageInstall "unrar" "是否下载rar压缩包解压软件unrar"
 
 PackageInstall "axel" "是否下载命令行多线程下载工具axel"
-
-print_check "是否重设计算机名(y/n)"
-read choice
-if [ ${choice} = "Y" ] || [ ${choice} = "y" ]; then
-        print_info "请输入你的计算机名："
-        read resetHostName
-        hostnamectl set-hostname $resetHostName
-        print_pass "OK, 重启后生效"
-fi

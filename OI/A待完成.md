@@ -2,33 +2,33 @@
 
 ## 待做题目
 
-- Kummer 定理 [Number of Binominal Coefficients](https://www.luogu.com.cn/problem/CF582D)
+- [ ] Kummer 定理 [Number of Binominal Coefficients](https://www.luogu.com.cn/problem/CF582D)
 
-- 生成函数 [城市规划](https://www.luogu.com.cn/problem/P4841) time < 1h
+- [ ] 生成函数 [城市规划](https://www.luogu.com.cn/problem/P4841) time < 1h
 
-- 最短路 [旅行者](https://www.luogu.com.cn/problem/P5304)
+- [ ] 最短路 [旅行者](https://www.luogu.com.cn/problem/P5304)
 
-- 生成函数 [整数的lqp拆分](https://www.luogu.com.cn/problem/P4451) time < 1h 30min
+- [ ] 生成函数 [整数的lqp拆分](https://www.luogu.com.cn/problem/P4451) time < 1h 30min
 
-- 生成函数 [Block](http://poj.org/problem?id=3734) time < 1h
+- [ ] 生成函数 [Block](http://poj.org/problem?id=3734) time < 1h
 
-- 生成函数 [lust](https://www.luogu.com.cn/problem/CF891E) time < 1h 30min
+- [ ] 生成函数 [lust](https://www.luogu.com.cn/problem/CF891E) time < 1h 30min
 
-- 置换，生成函数 [不动点](https://www.51nod.com/Challenge/Problem.html#problemId=1728) time < 1h
+- [ ] 置换，生成函数 [不动点](https://www.51nod.com/Challenge/Problem.html#problemId=1728) time < 1h
 
-- 群论 [图的同构计数](https://www.luogu.com.cn/problem/P4727) time < 1h 30min
+- [ ] 群论 [图的同构计数](https://www.luogu.com.cn/problem/P4727) time < 1h 30min
 
-- 生成函数 [fib](https://www.51nod.com/Challenge/Problem.html#problemId=1236) time < 1h
+- [ ] 生成函数 [fib](https://www.51nod.com/Challenge/Problem.html#problemId=1236) time < 1h
 
 题解：[command_block](https://www.luogu.com.cn/blog/command-block/post-shuo-xue-ji-lu-51nod1236-xu-lie-qiu-hu-v3-post)
 
-- 生成函数 [小朋友和二叉树](https://www.luogu.com.cn/problem/CF438E) time < 1h
+- [ ] 生成函数 [小朋友和二叉树](https://www.luogu.com.cn/problem/CF438E) time < 1h
 
 ## 待办事项
 
 未完成：
 
-1. 完成二项式反演博客题目部分
+- [ ] 完成二项式反演博客题目部分
 
 已完成（星期一清理）：
 
@@ -40,29 +40,29 @@
 
 ## 待读博客
 
-- [浅谈生成函数之EGF](https://zhuanlan.zhihu.com/p/53079223)
+- [ ] [浅谈生成函数之EGF](https://zhuanlan.zhihu.com/p/53079223)
 
-- [生成函数进阶与简单的图计数](https://www.luogu.com.cn/blog/lx-2003/generating-function-advanced) time: < 1h 30min
+- [ ] [生成函数进阶与简单的图计数](https://www.luogu.com.cn/blog/lx-2003/generating-function-advanced) time: < 1h 30min
 
-- [多项式学习笔记（三）： 多项式全家桶 - genshy - 博客园](https://www.cnblogs.com/genshy/p/14260473.html) time < 30min
+- [ ] [多项式学习笔记（三）](https://www.cnblogs.com/genshy/p/14260473.html) time < 30min
 
-- [多项式学习笔记（四）： 多项式计数基础 - genshy - 博客园](https://www.cnblogs.com/genshy/p/14419985.html) time < 30min
+- [ ] [多项式学习笔记（四）](https://www.cnblogs.com/genshy/p/14419985.html) time < 30min
 
-- [多项式计数杂谈](https://www.luogu.com.cn/blog/command-block/sheng-cheng-han-shuo-za-tan#) time < 5h
+- [ ] [多项式计数杂谈](https://www.luogu.com.cn/blog/command-block/sheng-cheng-han-shuo-za-tan#) time < 5h
 
-- [生成函数再入门](https://www.luogu.com.cn/blog/zyxxs/x-yi-x-jiang-tan-sheng-cheng-han-shuo-zai-ru-men) time < 30min
+- [ ] [生成函数再入门](https://www.luogu.com.cn/blog/zyxxs/x-yi-x-jiang-tan-sheng-cheng-han-shuo-zai-ru-men) time < 30min
 
-- [群论学习笔记](https://www.luogu.com.cn/blog/Troverld/qun-lun-xue-xi-bi-ji) time < 2h
+- [ ] [群论学习笔记](https://www.luogu.com.cn/blog/Troverld/qun-lun-xue-xi-bi-ji) time < 2h
 
-- [同余系基本定理2](https://www.luogu.com.cn/blog/command-block/tong-yu-xi2) time < 30min
+- [ ] [同余系基本定理2](https://www.luogu.com.cn/blog/command-block/tong-yu-xi2) time < 30min
 
-- [狄利克雷生成函数浅谈](https://www.luogu.com.cn/blog/gxy001/di-li-ke-lei-sheng-cheng-han-shuo-qian-tan) time < 1h
+- [ ] [狄利克雷生成函数浅谈](https://www.luogu.com.cn/blog/gxy001/di-li-ke-lei-sheng-cheng-han-shuo-qian-tan) time < 1h
 
-- [区间dp总结+题解](https://www.luogu.com.cn/blog/BreakPlus/ou-jian-dp-zong-jie-ti-xie) time < 1h
+- [ ] [区间dp总结+题解](https://www.luogu.com.cn/blog/BreakPlus/ou-jian-dp-zong-jie-ti-xie) time < 1h
 
-- [单调队列优化dp](https://www.luogu.com.cn/blog/130812/DQ-OP-DP) time < 1h
+- [ ] [单调队列优化dp](https://www.luogu.com.cn/blog/130812/DQ-OP-DP) time < 1h
 
-- [浅谈斯特林数及斯特林反演](https://www.luogu.com.cn/blog/efforts-will-pay-off/qian-tan-si-te-lin-shuo-ji-si-te-lin-fan-yan) time < 2h
+- [ ] [浅谈斯特林数及斯特林反演](https://www.luogu.com.cn/blog/efforts-will-pay-off/qian-tan-si-te-lin-shuo-ji-si-te-lin-fan-yan) time < 2h
 
 已读：
 

@@ -1,0 +1,341 @@
+/* ==UserStyle==
+@name           strange luogu
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document domain("luogu.com.cn") {
+    /*洛谷主站*/
+    /*动画*/
+    @keyframes user {
+        from {
+            margin-top: 0px;
+        }
+        to {
+            margin-top: 20px;
+        }
+    }
+    @keyframes h1 {
+        from {
+            margin-left: -200px;
+        }
+        to {
+            margin-left: 10px;
+        }
+    }
+    /*user css--------------------*/
+/*     a:link{color:#000!important;} */
+    h1{
+        color:#000000cf!important;
+    }
+    .lfe-caption[data-v-c06fccc2]{
+        background:#000!important;
+    }
+    .lfe-caption[data-v-187aafe9]{
+        background:#000!important;
+        filter: invert(100%);
+    }
+    
+    .span[data-v-263e39b8]{
+        color: rgb(0,0,0)!important;
+    }
+    /*------------------*/
+    /*背景*/
+    body {
+        background-image: url('https://pekingopera.ddns.net:84/api/v3/file/get/60/wy.png?sign=UlNZu6wvKvro4tywIQLN9jCgxNx2bYCHLAfp9hI_O4E%3D%3A0');
+        /* background-size: 100% 100%; */
+        background-attachment: fixed;
+        background-size:cover;
+    }
+    /*顶部*/
+    .wrapper.wrapped.lfe-body,
+    div.wrapper.wrapped.lfe-body.header-layout.narrow {
+        visibility: hidden;
+    }
+    .footer,
+    .header {
+        visibility: visible;
+    }
+    .user-nav[data-v-2dfcfd35] {
+        color: #000!important;
+        border-radius: 25px;
+        animation: user 1s;
+        margin-top: 20px;
+    }
+    .user-nav {
+        color: #000;
+    }
+    /*主体*/
+    .lfe-body {
+        visibility: hidden;
+    }
+    .clone-card,
+    .card.user-header-container.padding-0,
+    .am-modal-dialog,
+    .am-g.lg-main-content,
+    .container,
+    .lg-index-content.am-center,
+    .full-container {
+        visibility: visible;
+    }
+    .clone-card,
+    .swal2-popup.swal2-modal.swal2-show,
+    .popup[data-v-1d675dd8],
+    .center,
+    .card.padding-none,
+    .am-panel.am-panel-default.lg-summary,
+    .am-g.lg-table-bg0.lg-table-row,
+    .card.padding-default,
+    .lg-article {
+        transition: all 0.5s ease;
+        border-radius: 25px!important;
+        /*透明度*/
+        background-color: #ffffffed!important;
+    }
+    .clone-card:hover,
+    .swal2-popup.swal2-modal.swal2-show:hover,
+    .card.padding-none:hover,
+    .popup[data-v-1d675dd8]:hover,
+    .center:hover,
+    card.padding-none:hover,
+    .am-panel.am-panel-default.lg-summary:hover,
+    .am-g.lg-table-bg0.lg-table-row:hover,
+    .card.padding-default:hover,
+    .lg-article:hover {
+        transition: all 0.5s ease;
+        background-color: #fff!important;
+        box-shadow: 15px 15px 15px rgba(0, 0, 0, .5);
+    }
+    .am-comment.am-comment-primary,
+    .am-comment.am-comment-dange{
+        transition: all 0.5s ease;
+    }
+    .am-comment.am-comment-primary:hover,
+    .am-comment.am-comment-danger:hover {
+        transition: all 0.5s ease;
+        box-shadow: 15px 15px 15px rgba(0, 0, 0, .5);
+    }
+    .am-panel.lg-index-contest.am-panel-danger,
+    .am-panel.lg-index-contest.am-panel-success,
+    .am-panel.lg-index-contest.am-panel-primary{
+        border-radius:20px;
+    }
+    .am-panel.lg-index-contest.am-panel-primary{
+        border-color:rgb(0, 0, 0);
+    }
+    /*侧栏*/
+    div[data-v-27b2cd59] {
+        border-radius: 25px 25px 0px 0px;
+        background-color: #fff0!important;
+    }
+    #app > .lfe-body {
+        visibility: visible;
+        top: 130px;
+        border-radius: 25px;
+        height: 430px;
+        /*侧边栏块颜色*/
+        background-color: #000!important;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .5);
+        margin-left:10px;
+    }
+    *#app > .lfe-body > a > .text {
+        opacity: 0;
+        margin-top: -1em;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #app > .lfe-body > a:hover > .text {
+        opacity: 1;
+        margin-top: 0.2em;
+    }
+    
+    #app > .lfe-body > a {
+        /*侧栏：题库，题单，比赛，记录，讨论五个图标的颜色*/
+        color: #fff !important;
+        height: 3.7em;
+        margin-top: 3px;
+        padding: 0 !important;
+    }
+    .lfe-body>a{
+        transition: all 0.5s ease;
+        border-radius: 10px;
+    }
+    .lfe-body > a:hover {
+        transition: all 0.5s ease;
+        background-color: #fff;
+        color: #000!important;
+    }
+    #app > .lfe-body > a:hover {
+        color: #000!important;
+    }
+    .popup-button{
+        transition: all 0.5s ease;
+        color:#fff;
+        border-radius: 10px!important;
+    }
+    .popup-button:hover {
+        transition: all 0.5s ease;
+        background-color: #fff!important;
+        color: #000!important;
+    }
+    #app > .lfe-body {
+        animation: h1 1s;
+        width: 70px;
+    }
+    a.logo-wrap[data-v-27b2cd59] {
+        width: 70px;
+    }
+    /*字体*/
+    .lfe-h1 {
+        font-size: 40px;
+        animation: h1 1s;
+    }
+    nav[data-v-258e49ac],
+    .header-link.color-none,
+    .mdui-list-item-icon.mdui-icon.material-icons,
+    .mdui-drawer {
+        /*顶部链接颜色*/
+        color: #000;
+    }
+    .lfe-form-sz-small,
+    div[data-v-45591776]>.lfe-form-sz-middle{
+        color:#fff!important;
+    }
+    /*细节*/
+    .lfe-form-sz-small,
+    .am-input-group-label,
+    .am-btn.am-btn-primary.am-btn-sm,
+    .lfe-form-sz-middle[data-v-7ade990c],
+    .input-group.search-filter > button.lfe-form-sz-middle,
+    button.selected,
+    .items > li.selected {
+        /*主页随机跳题，任务计划“编辑”的颜色*/
+        background-color: rgb(0, 0, 0)!important;
+        border-color: rgb(0, 0, 0)!important;
+    }
+    div.tag[data-v-2a31ee10],
+    .lfe-caption.tag.selected {
+        /*题目列表：筛选算法图标颜色*/
+        background-color: rgb(0, 0, 0)!important;
+    }
+    .am-form-field,
+    .refined-input.input-wrap.frame {
+        /*输入框颜色*/
+        border-color: rgb(0, 0, 0)!important;
+    }
+    button[data-v-66021821]:hover {
+        border-color: rgb(0, 0, 0)!important;
+    }
+    .lfe-caption {
+        border-radius: 15px!important;
+    }
+    .test-case {
+        border-radius: 10px;
+    }
+    .progress-frame.has-tooltip>div{
+        background-color:rgb(0, 0, 0)!important;
+        border-radius:0px 10px 10px 0px;
+    }
+    .am-pagination > .am-active > a:hover,
+    .am-pagination > .am-active > a{
+        background-color:rgb(0, 0, 0);
+        border-color:rgb(0, 0, 0);
+    }
+    .am-pagination.am-pagination-centered a{
+        border-radius:10px;
+    }
+    .am-slider-default .am-control-nav li a.am-active{
+        background-color:rgb(0, 0, 0);
+    }
+     .color-default[data-v-303bbf52]:hover,
+    a:hover{
+        /*鼠标悬浮时链接颜色*/
+        color:rgb(0, 0, 0);
+    }
+    .menu[data-v-0e1ae304]{
+        --main-color:rgb(0, 0, 0)!important;
+    }
+    input:enabled + label:hover > .fa-input[data-v-7ecd1f3a]{
+        color:rgb(0, 0, 0)!important;
+    }
+    .clear-filter{
+        /*清除所有筛选条件*/
+        color:rgba(0, 0, 0, .8)!important;
+    }
+    /*隐藏广告*/
+    div[data-v-0a593618]{
+        display:none;
+    }
+    /*洛谷有题*/
+    /*顶部*/
+    #app-header{
+        background-color:#000;
+    }
+    nav.user-nav{
+        /*顶部图标颜色*/
+        color: #000!important;
+        border-radius: 25px!important;
+        animation: user 1s;
+        margin-top: 20px;
+    }
+    /*侧栏*/
+    .sm-hide.router-link-active.color-default{
+        border-radius:25px 25px 0px 0px;
+        background-color:#fff0!important;
+    }
+    #app-sidenav{
+        margin-left:10px;
+        margin-top:200px;
+        height:150px;
+        border-radius:25px;
+        background-color:#fff0;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .5);
+        animation: h1 1s;
+    }
+    .list-item-container>span{
+        opacity: 0;
+        margin-top: -1em;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .list-item-container:hover>span{
+        opacity: 1;
+        margin-top: 0.2em;
+        color:#000!important;
+    }
+    .icon.fa.fa-book{
+        opacity:1;
+        color:#000;
+    }
+    .list-item-container {
+        transition: all 0.5s ease;
+        border-radius: 10px;
+        color: #000 !important;
+        height: 3.7em;
+        margin-top: 3px;
+        padding: 0 !important;
+    }
+    .list-item-container:hover{
+        transition: all 0.5s ease;
+        background-color: #000;
+    }
+    /*主体*/
+    .card{
+        transition: all 0.5s ease;
+        border-radius:25px;
+        background-color:#000000c2;
+    }
+    .card:hover{
+        transition: all 0.5s ease;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .5);
+        background-color:#000;
+    }
+    /*底部*/
+    #app-footer{
+        visibility: hidden;
+    }
+    .width-wrap.min-margin{
+        visibility: visible;
+    }
+}

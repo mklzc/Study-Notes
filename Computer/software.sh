@@ -32,12 +32,12 @@ PackageInstall "screenfetch" "是否下载系统情况检测插件screenfetch"
 
 PackageInstall "ffmpeg" "是否下载视频播放插件ffmpeg"
 
-PackageInstall "g++" "是否下载g++编辑器"
+PackageInstall "g++" "是否下载g++编译器"
 
 PackageInstall "git" "是否下载分布式版本控制系统git"
 
 PackageInstall "vim" "是否下载命令行文本编辑器vim"
 
-PackageInstall "unrar" "是否下载rar压缩包解压软件unrar"
+PackageInstall "unzip" "是否下载zip压缩包解压软件unzip"
 
 PackageInstall "axel" "是否下载命令行多线程下载工具axel"

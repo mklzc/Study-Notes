@@ -44,6 +44,10 @@ $Dijkstra$ 加二分，易发现答案具有单调性，二分答案，$Dijkstra
 
 $df, ds$ 分别表示兴趣城市到其它点的最短距离和其他点到兴趣城市的最短距离。
 
+例题 $1.5$：[[ICPC-Beijing 2006] 狼抓兔子 - 洛谷](https://www.luogu.com.cn/problem/P4001)
+
+[题解-[ICPC-Beijing 2006] 狼抓兔子](https://www.cnblogs.com/mklzc/p/16639948.html)
+
 ## spfa
 
 [spfa 模板](https://www.luogu.com.cn/paste/trup9bhf)

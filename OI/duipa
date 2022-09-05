@@ -1,0 +1,16 @@
+g++ -o debug ${1}.cpp -w
+g++ -o std ${2}.cpp -w
+g++ -o makedata ${3}.cpp -w
+
+echo "编译成功"
+
+for ((i = 1; i <= 100; i++))
+do
+    ./makedata >in
+    ./std <in >ans
+    ./debug <in >out
+    if diff -Bbqs out ans;
+        then :
+        else exit 0;
+    fi
+done
